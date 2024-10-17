@@ -1,0 +1,13 @@
+@if(detallesPais){
+    <div>
+        <h3>{{ detallesPais.name.common }} ({{ detallesPais.name.official }})</h3>
+        <img [src]="detallesPais.flags.svg" alt="Flag of {{ detallesPais.name.common }}" width="150">
+        <p><strong>Capital:</strong> {{ detallesPais.capital[0] }}</p>
+        <p><strong>Región:</strong> {{ detallesPais.region }}</p>
+        <p><strong>Población:</strong> {{ detallesPais.population }}</p>
+      </div>
+}
+@else {
+    <h3> Sin actor selecionado</h3>
+}
+  

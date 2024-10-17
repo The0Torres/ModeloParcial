@@ -1,0 +1,17 @@
+@if(actor){
+    <div>
+        <p><strong>Nombre:</strong> {{ actor.nombre }}</p>
+        <p><strong>Apellido:</strong> {{ actor.apellido }}</p>
+        <p><strong>Edad:</strong> {{ actor.edad }}</p>
+        <p><strong>Documento:</strong> {{ actor.documento }}</p>
+        <p><strong>País:</strong> {{ actor.pais }}</p>
+    </div>
+}
+@else if(!actor){
+    <div>
+        <p>No se ha seleccionado ningún actor.</p>
+    </div>
+}
+
+
+  

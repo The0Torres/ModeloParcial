@@ -1,0 +1,37 @@
+/* Header Container */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons evenly */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add some padding */
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* White text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  }
+  
+  /* Header Buttons */
+  .header-buttons {
+    display: flex; /* Use flexbox for buttons */
+    gap: 15px; /* Space between buttons */
+  }
+  
+  .header-button {
+    background-color: #007bff; /* Blue button background */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Round button corners */
+    padding: 10px 15px; /* Add padding for button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  /* Button Hover Effect */
+  .header-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Router Outlet */
+  router-outlet {
+    margin-top: 20px; /* Add some space above the router outlet */
+  }
+  

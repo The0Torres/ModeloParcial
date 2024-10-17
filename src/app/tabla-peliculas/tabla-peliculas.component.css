@@ -1,0 +1,47 @@
+.list-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .list-group-item {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .list-group-item.selected {
+    background-color: #e3f2fd;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  h4 {
+    margin-bottom: 1rem;
+  }
+  
+  h6 {
+    margin-bottom: 0.25rem;
+  }
+  
+  .no-data {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+  }
+  
+  small {
+    display: block;
+    margin-top: 2px;
+  }

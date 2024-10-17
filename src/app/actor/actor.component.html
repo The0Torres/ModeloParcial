@@ -1,0 +1,40 @@
+<header>
+  <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <app-listado-actores [actores]="actores" (actorSeleccionado)="onActorSelected($event)"></app-listado-actores>
+  </div>
+</header>
+
+<main>
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Detalle Actor</h4>
+        </div>
+        <div class="card-body">
+          <app-detalle-actor [actor]="selectedActor"></app-detalle-actor>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Detalle Pais</h4>
+        </div>
+        <div class="card-body">
+          <app-detalle-pais [pais]="selectedActor?.pais"></app-detalle-pais>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm border-primary">
+        <div class="card-header py-3 text-bg-primary border-primary">
+          <h4 class="my-0 fw-normal">Peliculas Actor</h4>
+        </div>
+        <div class="card-body">
+          <app-peliculas-actor [actorNombre]="(selectedActor?.nombre + ' ' + selectedActor?.apellido)"></app-peliculas-actor>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

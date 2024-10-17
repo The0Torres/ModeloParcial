@@ -1,0 +1,19 @@
+<div *ngIf="peliculas.length > 0; else noPeliculas">
+    <h4>Películas del Actor</h4>
+    <ul class="list-group">
+      <li *ngFor="let pelicula of peliculas" class="list-group-item">
+        <h6>{{ pelicula.nombre }}</h6>
+        <p>Tipo: {{ pelicula.tipo }}</p>
+        <p>Fecha de estreno: {{ pelicula.fechaEstreno | date }}</p>
+        <p>Público: {{ pelicula.cantidadPublico | number }}</p>
+        <img [src]="pelicula.foto" alt="Poster de la película" class="img-fluid" />
+      </li>
+    </ul>
+  </div>
+  <ng-template #noPeliculas>
+    <p>
+      Este actor no tiene películas registradas o no se ha seleccionado ningún
+      actor.
+    </p>
+  </ng-template>
+  

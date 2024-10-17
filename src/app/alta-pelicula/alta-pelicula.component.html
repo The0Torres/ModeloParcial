@@ -1,0 +1,53 @@
+<main>
+  <div class="row g-5">
+    <div class="col-md-5 col-lg-4 order-md-last">
+      <app-tabla-actores (actorSeleccionado)="onActorSeleccionado($event)"></app-tabla-actores>
+    </div>
+
+    <div class="col-md-7 col-lg-8">
+      <h4 class="mb-3">Alta Película</h4>
+      <form class="needs-validation" (ngSubmit)="onSubmit()" #peliculaForm="ngForm">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" [(ngModel)]="pelicula.nombre" name="nombre" required>
+          </div>
+
+          <div class="col-sm-6">
+            <label for="tipo" class="form-label">Tipo</label>
+            <select class="form-select" id="tipo" [(ngModel)]="pelicula.tipo" name="tipo" required>
+              <option value="">Seleccione un tipo...</option>
+              <option *ngFor="let tipo of tiposPelicula" [value]="tipo">
+                {{tipo}}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="fechaEstreno" class="form-label">Fecha estreno</label>
+            <input type="date" class="form-control" id="fechaEstreno" [(ngModel)]="pelicula.fechaEstreno" name="fechaEstreno" required>
+          </div>
+
+          <div class="col-12">
+            <label for="cantidadPublico" class="form-label">Cantidad de Público</label>
+            <input type="number" class="form-control" id="cantidadPublico" [(ngModel)]="pelicula.cantidadPublico" name="cantidadPublico" required min="1">
+          </div>
+
+          <div class="col-12">
+            <label for="foto" class="form-label">Foto URL</label>
+            <input type="url" class="form-control" id="foto" [(ngModel)]="pelicula.foto" name="foto" required>
+          </div>
+
+          <div class="col-12">
+            <label for="protagonista" class="form-label">Protagonista</label>
+            <input type="text" class="form-control" id="protagonista" [(ngModel)]="pelicula.protagonista" name="protagonista" required readonly>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <button class="w-100 btn btn-primary btn-lg" type="submit">Agregar Película</button>
+      </form>
+    </div>
+  </div>
+</main>

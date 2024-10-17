@@ -1,0 +1,17 @@
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-primary">Países</span>
+  </h4>
+  <div class="list-container">
+    <ul class="list-group mb-3">
+      <li
+        *ngFor="let pais of paises"
+        class="list-group-item d-flex justify-content-between lh-condensed"
+        (click)="seleccionarPais(pais.name.common)"
+      >
+        <div>
+          <h6 class="my-0">{{ pais.name.common }}</h6>
+          <small class="text-muted">{{ pais.region }}</small>
+        </div>
+      </li>
+    </ul>
+  </div>

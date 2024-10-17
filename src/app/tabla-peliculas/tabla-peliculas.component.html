@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let pelicula of peliculas"
+      (click)="seleccionarPelicula(pelicula)"
+    >
+      <td>{{ pelicula.nombre }}</td>
+      <td>{{ pelicula.tipo }}</td>
+      <td>{{ pelicula.fechaEstreno }}</td>
+    </tr>
+  </tbody>
+</table>
